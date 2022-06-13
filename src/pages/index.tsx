@@ -1,195 +1,222 @@
-import * as React from "react"
+import React, { useRef } from "react"
+import type { PageProps } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import CanvasBG from "../canvas"
+import styled from "styled-components"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const doclistStyles = {
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+/* Icons */
+import TwitterIcon from "@mui/icons-material/Twitter"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import GitHubIcon from "@mui/icons-material/GitHub"
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLinks = [
-  {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
-  },
-  {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  }
-]
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+/* Styles */
+import "../styles/globalStyles.scss"
+import { Grid } from "@mui/material"
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({ path }: PageProps) => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        🎉🎉🎉
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li style={docLinkStyle}>
+    <>
+      <CanvasBG />
+      <Header>
+        <MountainBg>
+          <StaticImage
+            src="../images/mountainscape@2x.png"
+            alt="mountain background"
+            className="mountain-bg"
+            placeholder="tracedSVG"
+          />
+          <TitleContainer>
+            <Title>Nathan Garrow</Title>
+            <Subtitle>WordPress + JAMstack Developer</Subtitle>
+          </TitleContainer>
+        </MountainBg>
+      </Header>
+      <Main>
+        <section>
+          <h2>{"<AboutMe />"}</h2>
+          <p>
+            I'm Nathan! By day, a frontend developer at RFTB, a bespoke
+            WordPress digital experience agency based out of Weatherford, Texas.
+            My day-to-day includes managing the entire life cycle of websites
+            for local, national, and international property management
+            companies, sites for institutions of higher education, or digital
+            interactive app experiences for world-renowned art museums built
+            with Ionic.
+          </p>
+          <p>
+            When I'm not working, I am working on a personal web project (more
+            to be announced soon), learning new skills (this page was my first
+            steps with TypeScript!), camping and backpacking with my wife,
+            playing Dungeons &amp; Dragons with friends, or{" "}
             <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
+              href="https://www.instagram.com/p/B3K8MMdF2rE/"
+              target="_blank"
+              rel="noreferrer noopenner"
             >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
+              shooting the stars
+            </a>{" "}
+            in the darkest state parks I can find.
+          </p>
+          <p>
+            Lately, my interests have included TypeScript, Three.js, Next.js,
+            and Gatsby, as well as headless CMS's such as Strapi, Contentful,
+            and Keystone.
+          </p>
+        </section>
+        <section>
+          <h2>{"<Config />"}</h2>
+          <p className="mb">
+            While my setup is constantly changing, below are some of my
+            preferred tools.
+          </p>
+          <Grid container spacing={1} alignItems="center">
+            <Grid item xs={12} md={6}>
+              <ConfigList>
+                <li>VS Code + Firefox Quantum Dark</li>
+                <li>Terminal: Hyper</li>
+                <li>Browser: Brave</li>
+              </ConfigList>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <ConfigList>
+                <li>SSG of Choice: Gatsby</li>
+                <li>SSR of Choice: Next.js</li>
+                <li>Headless CMS: Strapi/Contentful</li>
+              </ConfigList>
+            </Grid>
+          </Grid>
+        </section>
+        <section>
+          <h2>{"<WebPresence />"}</h2>
+          <Grid container spacing={3} justifyContent="center">
+            <IconGrid item>
               <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
+                href="https://twitter.com/nategarrow_"
+                target="_blank"
+                rel="noreferrer noopenner"
               >
-                {link.text}
+                <TwitterIcon />
               </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+            </IconGrid>
+            <IconGrid item>
+              <a
+                href="https://www.linkedin.com/in/ntgarrow/"
+                target="_blank"
+                rel="noreferrer noopenner"
+              >
+                <LinkedInIcon />
+              </a>
+            </IconGrid>
+            <IconGrid item>
+              <a
+                href="https://github.com/nategarrow"
+                target="_blank"
+                rel="noreferrer noopenner"
+              >
+                <GitHubIcon />
+              </a>
+            </IconGrid>
+          </Grid>
+        </section>
+      </Main>
+    </>
   )
 }
 
 export default IndexPage
+
+const Header = styled.header`
+  height: 105vh;
+  background: #0e0a16;
+  z-index: 5;
+`
+const MountainBg = styled.div`
+  position: absolute;
+  top: 40vh;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mountain-bg {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    z-index: 3;
+
+    img {
+      object-position: top center;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+`
+const TitleContainer = styled.div`
+  position: relative;
+  padding-top: 10vh;
+  z-index: 10;
+  text-align: center;
+
+  @media (max-width: 764px) {
+    paddint-top: 5vh;
+  }
+`
+const Title = styled.h1`
+  text-transform: uppercase;
+  font-weight: normal;
+`
+const Subtitle = styled.p`
+  color: white;
+`
+const Main = styled.main`
+  background-color: #0e0a16;
+  height: 100vh;
+  padding-top: 140px;
+
+  section {
+    padding: clamp(40px, 12vh, 100px) 10px clamp(30px, 8vh, 50px);
+    width: min(100%, 90vw, 1300px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    h2 {
+      margin-bottom: clamp(20px, 5vh, 40px);
+    }
+  }
+
+  @media (max-width: 764px) {
+    padding-top: 40px;
+
+    section {
+      padding: 50px 10px;
+    }
+  }
+`
+const ConfigList = styled.ul`
+  li {
+    margin-bottom: 0.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+`
+const IconGrid = styled(Grid)`
+  svg {
+    width: clamp(40px, 4vw, 60px);
+    height: clamp(40px, 4vw, 60px);
+    fill: #ff0023;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover,
+  a:focus-visible {
+    svg {
+      fill: #006adf;
+    }
+  }
+`
