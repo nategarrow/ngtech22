@@ -28,6 +28,14 @@ const config: GatsbyConfig = {
       __key: "images",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "models",
+        path: "./src/assets/models/",
+      },
+      __key: "models",
+    },
+    {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         typekit: {
