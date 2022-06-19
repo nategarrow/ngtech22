@@ -174,12 +174,12 @@ const Subtitle = styled.p`
 `
 const Main = styled.main`
   background-color: #0e0a16;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 140px;
 
   section {
     padding: clamp(40px, 12vh, 100px) 10px clamp(30px, 8vh, 50px);
-    width: min(100%, 90vw, 1300px);
+    width: min(100%, 90vw, 1200px);
     margin-left: auto;
     margin-right: auto;
     text-align: center;

@@ -8,7 +8,7 @@ import styled from "styled-components"
 const CanvasBG = () => {
   return (
     <CanvasContainer>
-      <Canvas shadows dpr={[1, 2]}>
+      <Canvas shadows dpr={1}>
         <Scene />
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
         <EffectComposer multisampling={2}>
