@@ -14,10 +14,10 @@ import "../styles/globalStyles.scss"
 import { Grid } from "@mui/material"
 
 // markup
-const IndexPage = ({ serverData }: PageProps) => {
+const IndexPage = () => {
   return (
     <>
-      <SEO title={serverData.title} desc="" />
+      <SEO title="Nate Garrow Tech | Fort Worth, TX Web Developer" desc="" />
       <CanvasBG />
       <Header>
         <MountainBg>
@@ -126,13 +126,6 @@ const IndexPage = ({ serverData }: PageProps) => {
 }
 
 export default IndexPage
-
-export async function getServerData() {
-  const title: string = "Nate Garrow Tech | Fort Worth, TX Web Developer"
-  return {
-    props: { title },
-  }
-}
 
 const Header = styled.header`
   height: 105vh;
