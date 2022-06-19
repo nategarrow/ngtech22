@@ -8,15 +8,16 @@ import styled from "styled-components"
 import TwitterIcon from "@mui/icons-material/Twitter"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
-
+import SEO from "../components/seo"
 /* Styles */
 import "../styles/globalStyles.scss"
 import { Grid } from "@mui/material"
 
 // markup
-const IndexPage = ({ path }: PageProps) => {
+const IndexPage = ({ serverData }: PageProps) => {
   return (
     <>
+      <SEO title={serverData.title} desc="" />
       <CanvasBG />
       <Header>
         <MountainBg>
@@ -125,6 +126,13 @@ const IndexPage = ({ path }: PageProps) => {
 }
 
 export default IndexPage
+
+export async function getServerData() {
+  const title: string = "Nate Garrow Tech | Fort Worth, TX Web Developer"
+  return {
+    props: { title },
+  }
+}
 
 const Header = styled.header`
   height: 105vh;

@@ -2,17 +2,13 @@ import React from "react"
 import { Canvas } from "@react-three/fiber"
 import { EffectComposer, Bloom } from "@react-three/postprocessing"
 import Scene from "./scene"
-import {
-  PerspectiveCamera,
-  Stars,
-  MeshReflectorMaterial,
-} from "@react-three/drei"
+import { PerspectiveCamera } from "@react-three/drei"
 import styled from "styled-components"
 
 const CanvasBG = () => {
   return (
     <CanvasContainer>
-      <Canvas shadows dpr={[1, 1.5]}>
+      <Canvas shadows dpr={[1, 2]}>
         <Scene />
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
         <EffectComposer multisampling={2}>
