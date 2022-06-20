@@ -4,6 +4,7 @@ import { PointLight } from "three"
 import IcoSphere from "./objects/icosphere"
 import { Stars } from "@react-three/drei"
 import { useSpring, animated, SpringValue } from "react-spring"
+import MountainBg from "./mountains"
 
 const Scene = () => {
   const point = useRef<PointLight>(null!)
@@ -28,7 +29,7 @@ const Scene = () => {
   return (
     <>
       <Suspense fallback={null}>
-        <group ref={sphereGroup} scale={0.3} position={[2,3,-1]}>
+        <group ref={sphereGroup} scale={0.3} position={[2, 3, -1]}>
           <IcoSphere position={[0, 0, 0]} scale={1.3} />
           <pointLight
             ref={point}
@@ -37,6 +38,7 @@ const Scene = () => {
             position={[2, 0, -4]}
           />
         </group>
+        <MountainBg />
         <Stars count={7000} factor={10} radius={800} />
       </Suspense>
     </>

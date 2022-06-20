@@ -20,18 +20,12 @@ const IndexPage = () => {
       <SEO title="Nate Garrow Tech | Fort Worth, TX Web Developer" desc="" />
       <CanvasBG />
       <Header>
-        <MountainBg>
-          <StaticImage
-            src="../images/mountainscape@2x.png"
-            alt="mountain background"
-            className="mountain-bg"
-            placeholder="tracedSVG"
-          />
+        <TitleWrapper>
           <TitleContainer>
             <Title>Nathan Garrow</Title>
             <Subtitle>WordPress + JAMstack Developer</Subtitle>
           </TitleContainer>
-        </MountainBg>
+        </TitleWrapper>
       </Header>
       <Main>
         <section>
@@ -132,7 +126,7 @@ const Header = styled.header`
   background: #0e0a16;
   z-index: 5;
 `
-const MountainBg = styled.div`
+const TitleWrapper = styled.div`
   position: absolute;
   top: 40vh;
   left: 0;
@@ -179,7 +173,7 @@ const Main = styled.main`
 
   section {
     padding: clamp(40px, 12vh, 100px) 10px clamp(30px, 8vh, 50px);
-    width: min(100%, 90vw, 1200px);
+    width: min(100%, 90vw, 1300px);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
