@@ -3,13 +3,13 @@ import { useGLTF } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import * as three from "three"
 
-const Model = (props) => {
+const IcoSphere = (props) => {
   const { nodes, materials } = useGLTF("/ico-sphere.gltf")
   const sphere = useRef<three.Mesh>(null!)
 
   useFrame(() => {
     // rotate the sphere
-    sphere.current!.rotation.y = sphere.current!.rotation.y + 1 / 2160
+    sphere.current!.rotation.y = sphere.current!.rotation.y + 1 / 1260
     sphere.current!.rotation.x = sphere.current!.rotation.x + 1 / 1480
   })
 
@@ -27,6 +27,6 @@ const Model = (props) => {
   )
 }
 
-export default Model
+export default IcoSphere
 
 useGLTF.preload("/ico-sphere.gltf")
