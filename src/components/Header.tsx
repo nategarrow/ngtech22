@@ -3,7 +3,7 @@ import styled from "styled-components"
 import useScrollPosition from "../hooks/useScrollPosition"
 
 const Header = () => {
-  const pos: number = useScrollPosition(0.15) //scrollY * 0.5
+  const pos: number = useScrollPosition(0.25) //scrollY * 0.5
 
   return (
     <Head>
@@ -14,7 +14,9 @@ const Header = () => {
           }}
         >
           <Title>Nathan Garrow</Title>
-          <Subtitle>WordPress + JAMstack Developer</Subtitle>
+          <Subtitle>
+            Former WordPress Web Developer looking at the Next(.js) big thing!
+          </Subtitle>
         </TitleContainer>
       </TitleWrapper>
     </Head>
@@ -61,6 +63,7 @@ const TitleContainer = styled.div`
 const Title = styled.h1`
   text-transform: uppercase;
   font-weight: normal;
+  letter-spacing: 6px;
 `
 const Subtitle = styled.p`
   color: white;

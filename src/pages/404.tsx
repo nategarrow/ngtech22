@@ -1,50 +1,77 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import React, { useEffect } from "react"
+import { Link, navigate } from "gatsby"
+import SEO from "../components/seo"
+import CanvasBG from "../canvas"
+import styled from "styled-components"
 
 // markup
-const NotFoundPage = () => {
+const Page404 = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <>
+      <SEO
+        title="Error: 404 | Nate Garrow Tech | Fort Worth, TX Web Developer"
+        desc="Fort Worth, TX based web developer seeking a new adventure as a React Developer"
+      />
+      <CanvasBG />
+      <article>
+        <Head>
+          <TitleWrapper>
+            <TitleContainer>
+              <Title>Well hello there!</Title>
+              <Subtitle>
+                Doesn't like anyone else is here. Would you like to try the{" "}
+                <Link to="/">Home</Link> page?
+              </Subtitle>
+            </TitleContainer>
+          </TitleWrapper>
+        </Head>
+      </article>
+    </>
   )
 }
 
-export default NotFoundPage
+export default Page404
+
+const Head = styled.header`
+  height: 100vh;
+`
+const TitleWrapper = styled.div`
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mountain-bg {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    z-index: 3;
+
+    img {
+      object-position: top center;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+`
+const TitleContainer = styled.div`
+  position: relative;
+  padding-top: 10vh;
+  z-index: 10;
+  text-align: center;
+  @media (max-width: 764px) {
+    paddint-top: 5vh;
+  }
+`
+const Title = styled.h1`
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 6px;
+`
+const Subtitle = styled.p`
+  color: white;
+`

@@ -18,15 +18,20 @@ import { colors } from "../styles/variables"
 const IndexPage = () => {
   return (
     <>
-      <SEO title="Nate Garrow Tech | Fort Worth, TX Web Developer" desc="" />
+      <SEO
+        title="Nate Garrow Tech | Fort Worth, TX Web Developer"
+        desc="Fort Worth, TX based web developer seeking a new adventure as a React Developer"
+      />
       <CanvasBG />
-      <Header />
-      <Main>
-        <About />
-        <Resume />
-        <Preferences />
-        <WebPresence />
-      </Main>
+      <article>
+        <Header />
+        <Main>
+          <About />
+          <Resume />
+          <Preferences />
+          <WebPresence />
+        </Main>
+      </article>
     </>
   )
 }

@@ -5,12 +5,15 @@ const About = () => {
     <section>
       <h2>// About Me</h2>
       <p>
-        I'm Nathan! By day, a frontend developer at RFTB, a bespoke WordPress
-        digital experience agency based out of Weatherford, Texas. My day-to-day
-        includes managing the entire life cycle of websites for local, national,
-        and international property management companies, sites for institutions
-        of higher education, or digital interactive app experiences for
-        world-renowned art museums built with Ionic.
+        I'm Nathan! For years, I've worked as a WordPress developer, creating
+        bespoke WordPress themes for an agency. However, lately I've had my eyes
+        on everything React, with a particular interest in Gatsby and Next.js.
+        Currently,{" "}
+        <u>
+          I am seeking employment with an agency that leverages these modern
+          frameworks to create performant, responsive websites
+        </u>
+        .
       </p>
       <p>
         When I'm not working, I am working on a personal web project (more to be

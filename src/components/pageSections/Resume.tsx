@@ -18,7 +18,7 @@ const Resume = () => {
               Small, fast-paced design agency with a big vision, RFTB has an
               esteemed roster spanning from local, national, and international
               clients. While I can't disclose specific client information, I can
-              say as a small agency developer, I had my hand in{" "}
+              say as a developer for a small agency, I had my hand in{" "}
               <a
                 href="https://rftb.agency/work"
                 target="_blank"
@@ -51,7 +51,7 @@ const Resume = () => {
               the company website. After a few months (and a close copyright
               infringement case - not my fault, funny story, ask me about it!),
               I not only delivered a revitalized website, but a
-              web-scraper-powered custom CMS.
+              web-scraper-powered custom CMS as well.
             </p>
           </Description>
         </Project>

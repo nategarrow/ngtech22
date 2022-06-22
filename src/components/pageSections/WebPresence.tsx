@@ -5,6 +5,7 @@ import { Grid } from "@mui/material"
 import TwitterIcon from "@mui/icons-material/Twitter"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
+import { colors } from "../../styles/variables"
 
 const WebPresence = () => {
   return (
@@ -49,7 +50,7 @@ const IconGrid = styled(Grid)`
   svg {
     width: clamp(40px, 4vw, 60px);
     height: clamp(40px, 4vw, 60px);
-    fill: #ff0023;
+    fill: ${colors.red};
     transition: all 0.2s ease-in-out;
   }
 

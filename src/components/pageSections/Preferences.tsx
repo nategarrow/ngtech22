@@ -7,13 +7,12 @@ const Preferences = () => {
     <section>
       <h2>// Preferences</h2>
       <p className="mb">
-        While my setup is constantly changing, below are some of my preferred
-        tools.
+        
       </p>
       <Grid container spacing={1} alignItems="center">
         <Grid item xs={12} md={6}>
           <ConfigList>
-            <li>VS Code + Firefox Quantum Dark</li>
+            <li>VS Code + Firefox Quantum Dark Theme</li>
             <li>Terminal: Hyper</li>
             <li>Browser: Brave</li>
           </ConfigList>
