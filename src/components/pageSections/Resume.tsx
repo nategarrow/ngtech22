@@ -1,11 +1,11 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 import { colors } from "../../styles/variables"
+import Section from "../Section"
 
 const Resume = () => {
   return (
-    <section>
-      <h2>// Work</h2>
+    <Section title="// Work">
       <ProjectList>
         <Project>
           <Year>Oct 2019 - Jun 2022</Year>
@@ -31,7 +31,7 @@ const Resume = () => {
               However, I was never fully satisfied with just using WordPress.
               For most of my time with the agency, I strongly advocated for
               switching to Headless WordPress with a React Framework frontend.
-              Fall of 2021, I successfully proposed, lead, and launched a Gatsby
+              Fall of 2021, I successfully proposed, led, and deployed a Gatsby
               + Headless WordPress website! I've been looking forward to working
               more with Gatsby and Next.js ever since.
             </p>
@@ -56,7 +56,7 @@ const Resume = () => {
           </Description>
         </Project>
       </ProjectList>
-    </section>
+    </Section>
   )
 }
 

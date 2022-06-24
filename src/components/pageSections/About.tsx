@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 import { colors } from "../../styles/variables"
+import Section from "../Section"
 
 type LinkProps = {
   link: string
@@ -17,8 +18,7 @@ const ExtLink = ({ link, children }: LinkProps) => {
 
 const About = () => {
   return (
-    <Section>
-      <h2>// About Me</h2>
+    <Section title="// About Me">
       <p>
         Hey! I'm Nathan. For the last few years, I've been a WordPress
         developer, creating bespoke WordPress themes for a digital design
@@ -30,19 +30,20 @@ const About = () => {
       </p>
       <p>
         <u>
-          I am currently seeking employment with an agency that leverages these
-          modern frameworks to create performant, responsive websites.
+          I am currently seeking employment with an agency that leverages modern
+          frameworks to create performant, responsive websites.
         </u>
       </p>
       <p>
         Lately, my interests have included TypeScript, Three.js, advanced
         GraphQL, improving my skills with Gatsby and Next.js, as well as
-        headless CMS's such as Strapi, Contentful, and Keystone.
+        headless CMS's such as Strapi, Contentful, and Keystone.js.
       </p>
       <p>
         When I'm not sitting in front of a computer or watching YouTube
-        tutorials, I enjoy exploring new places with my wife, camping, exploring
-        museums, playing Dungeons &amp; Dragons with friends, or{" "}
+        tutorials, I enjoy exploring new places with my wife, camping and
+        hiking, exploring museums, playing Dungeons &amp; Dragons with friends,
+        or{" "}
         <ExtLink link="https://www.instagram.com/p/B3K8MMdF2rE/">
           shooting&nbsp;the&nbsp;stars
         </ExtLink>{" "}
@@ -53,24 +54,3 @@ const About = () => {
 }
 
 export default About
-
-const Section = styled.section`
-  isolation: isolate;
-  position: relative;
-
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   right: 0;
-  //   top: 100%;
-  //   transform: translate(50%, -50%);
-  //   border-radius: 50%;
-  //   z-index: -1;
-  //   width: clamp(300px, 75vw, 1800px);
-  //   height: clamp(300px, 75vw, 1800px);
-  //   background: radial-gradient(
-  //     rgba(229, 42, 67, 0.7),
-  //     rgba(229, 42, 67, 0) 40%
-  //   );
-  // }
-`

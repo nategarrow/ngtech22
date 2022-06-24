@@ -27,8 +27,8 @@ const Scene = () => {
     <>
       <ambientLight intensity={0.1} color={colors.red} />
       <Suspense fallback={null}>
-        <group ref={sphereGroup} scale={0.3} position={[0, 2, 0]}>
-          <D20 position={[0, 0, 0]} scale={4} />
+        <group ref={sphereGroup} scale={0.3} position={[0, 0, 0]}>
+          <D20 position={[0, 0, 0]} scale={6} />
           <pointLight
             ref={point}
             color={colors.blue}

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 import { Grid } from "@mui/material"
 /* Icons */
@@ -6,11 +6,10 @@ import TwitterIcon from "@mui/icons-material/Twitter"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import { colors } from "../../styles/variables"
-
+import Section from "../Section"
 const WebPresence = () => {
   return (
-    <section>
-      <h2>// Web Presence</h2>
+    <Section title="// Web Presence">
       <Grid container spacing={3} justifyContent="center">
         <IconGrid item>
           <a
@@ -40,7 +39,7 @@ const WebPresence = () => {
           </a>
         </IconGrid>
       </Grid>
-    </section>
+    </Section>
   )
 }
 

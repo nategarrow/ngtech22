@@ -1,14 +1,12 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { Grid } from "@mui/material"
 import styled from "styled-components"
+import Section from "../Section"
 
 const Preferences = () => {
   return (
-    <section>
-      <h2>// Preferences</h2>
-      <p className="mb">
-        
-      </p>
+    <Section title="// Preferences">
+      <p className="mb"></p>
       <Grid container spacing={1} alignItems="center">
         <Grid item xs={12} md={6}>
           <ConfigList>
@@ -25,7 +23,7 @@ const Preferences = () => {
           </ConfigList>
         </Grid>
       </Grid>
-    </section>
+    </Section>
   )
 }
 
