@@ -11,6 +11,7 @@ const Header = () => {
         <TitleContainer
           style={{
             transform: `translateY(${pos}px)`,
+            opacity: Math.max(1 - pos / 250, 0),
           }}
         >
           <Title>Nathan Garrow</Title>

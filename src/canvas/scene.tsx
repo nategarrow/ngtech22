@@ -17,8 +17,10 @@ const Scene = () => {
     const x = (mouse.x * viewport.width) / 2
     const y = (mouse.y * viewport.height) / 2
 
-    point.current.position.x = x
-    point.current.position.y = y
+    if (point.current && point.current !== null) {
+      point.current.position.x = x
+      point.current.position.y = y
+    }
   })
 
   return (
