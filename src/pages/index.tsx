@@ -19,7 +19,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO
-        title="Nate Garrow Tech | Fort Worth, TX Web Developer"
+        title="Nathan Garrow | Front-End Web Developer"
         desc="Fort Worth, TX based web developer seeking a new adventure as a React Developer"
       />
       <CanvasBG />

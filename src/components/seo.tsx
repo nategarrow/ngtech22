@@ -3,11 +3,12 @@ import Helmet from "react-helmet"
 
 type AppProps = {
   title: string
-  desc: string
+  desc?: string
 }
 const SEO = ({ title, desc }: AppProps) => {
   return (
-    <Helmet title={title}>
+    <Helmet>
+      <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="description" content={desc || ""} />
     </Helmet>
