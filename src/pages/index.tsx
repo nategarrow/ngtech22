@@ -45,10 +45,21 @@ const Main = styled.main`
   padding-bottom: 140px;
   z-index: 20;
   background-color: ${colors.background};
+  isolation: isolate;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgb(4, 0, 11), ${colors.background});
+    z-index: -1;
+  }
 
   section {
     padding: clamp(40px, 12vh, 100px) 10px clamp(30px, 8vh, 50px);
-    width: min(100%, 90vw, 1300px);
+    width: min(100%, 90vw, 1100px);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -63,6 +74,10 @@ const Main = styled.main`
 
     section {
       padding: 50px 10px;
+
+      p {
+        text-align: left;
+      }
     }
   }
 `

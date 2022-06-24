@@ -13,9 +13,9 @@ const CanvasBG = () => {
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
         <EffectComposer multisampling={2}>
           <Bloom
-            kernelSize={4}
-            luminanceThreshold={0.1}
-            luminanceSmoothing={1}
+            kernelSize={2}
+            luminanceThreshold={0.15}
+            luminanceSmoothing={6}
             intensity={1}
           />
         </EffectComposer>
@@ -31,7 +31,6 @@ const CanvasContainer = styled.div`
   inset: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   overflow: hidden;
   margin: 0;
 `

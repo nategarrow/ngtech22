@@ -7,7 +7,7 @@ $white: #d5d5d5;
 
 html,
 body {
-  background: #0e0a16;
+  background: rgb(4, 0, 11);
   padding: 0;
   margin: 0;
   height: 100%;
@@ -26,6 +26,13 @@ svg {
   overflow: visible;
 }
 
+::selection {
+  background: $red; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $red; /* Gecko Browsers */
+}
+
 h1,
 h2,
 h3,
@@ -41,6 +48,13 @@ h1 {
 
   @media (max-width: 764px) {
     font-size: 3rem;
+  }
+
+  &::selection {
+    background: $white; /* WebKit/Blink Browsers */
+  }
+  &::-moz-selection {
+    background: $white; /* Gecko Browsers */
   }
 }
 
@@ -77,6 +91,13 @@ li {
 /* Colors */
 .red {
   color: $red;
+
+  &::selection {
+    background: $blue; /* WebKit/Blink Browsers */
+  }
+  &::-moz-selection {
+    background: $blue; /* Gecko Browsers */
+  }
 }
 .green {
   color: $green;
@@ -89,19 +110,6 @@ li {
 }
 
 /* Classes */
-.blue-btn {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background-color: $blue;
-  border: 2px solid $white;
-  font-size: 1.5rem;
-  color: $white;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-.blue-btn:hover {
-  background-color: #0080bb;
-}
 .fadeIn {
   opacity: 0;
 }
@@ -109,8 +117,24 @@ li {
 a {
   color: $red;
   transition: all 0.3s ease-in-out;
+  text-decoration: underline;
+  
+  &::selection {
+    background: $white; /* WebKit/Blink Browsers */
+  }
+  &::-moz-selection {
+    background: $white; /* Gecko Browsers */
+  }
+
   &:hover,
   &:focus-visible {
     color: $blue;
+
+    &::selection {
+      background: $green; /* WebKit/Blink Browsers */
+    }
+    &::-moz-selection {
+      background: $green; /* Gecko Browsers */
+    }
   }
 }

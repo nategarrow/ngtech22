@@ -10,8 +10,7 @@ const Resume = () => {
         <Project>
           <Year>Oct 2019 - Jun 2022</Year>
           <Position>
-            WordPress Developer{" "}
-            <span>// RFTB | Digital Design Agency - Weatherford, Texas</span>
+            WordPress Developer <span>// RFTB | Digital Design Agency</span>
           </Position>
           <Description>
             <p>
@@ -41,7 +40,8 @@ const Resume = () => {
         <Project>
           <Year>Oct 2018 - Oct 2019</Year>
           <Position>
-            Web Developer <span>// TeamGlobal - Fort Worth, Texas</span>
+            Web Developer{" "}
+            <span>// TeamGlobal | Aerospace &amp; Aviation Staffing</span>
           </Position>
           <Description>
             <p>
@@ -77,6 +77,13 @@ const Year = styled.p`
   margin-bottom: 0;
   font-size: 0.75em;
   font-style: italic;
+
+  ::selection {
+    background: ${colors.white};
+  }
+  ::-moz-selection {
+    background: ${colors.white};
+  }
 `
 const Position = styled.h3`
   color: ${colors.white};

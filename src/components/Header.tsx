@@ -15,7 +15,7 @@ const Header = () => {
         >
           <Title>Nathan Garrow</Title>
           <Subtitle>
-            Former WordPress Web Developer looking at the Next(.js) big thing!
+            Former WordPress Web Developer looking for the Next(.js) big thing
           </Subtitle>
         </TitleContainer>
       </TitleWrapper>
@@ -37,6 +37,7 @@ const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 
   .mountain-bg {
     position: absolute;
@@ -56,14 +57,23 @@ const TitleContainer = styled.div`
   padding-top: 10vh;
   z-index: 10;
   text-align: center;
+
   @media (max-width: 764px) {
     paddint-top: 5vh;
+    max-width: 95%;
+    margin: 0 auto;
+
+    p {
+      max-width: 30ch;
+      margin: 0 auto;
+    }
   }
 `
 const Title = styled.h1`
   text-transform: uppercase;
   font-weight: normal;
   letter-spacing: 6px;
+  line-height: 1;
 `
 const Subtitle = styled.p`
   color: white;

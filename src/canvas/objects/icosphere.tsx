@@ -15,14 +15,18 @@ const IcoSphere = (props) => {
 
   return (
     <group dispose={null}>
-      <mesh
+      {/* <mesh
         {...props}
         ref={sphere}
         castShadow
         receiveShadow
         geometry={nodes.Icosphere.geometry}
         material={materials["Material.002"]}
-      />
+      /> */}
+      <mesh ref={sphere} {...props}>
+        <icosahedronBufferGeometry attach="geometry" args={[1, 0]} />
+        <meshPhongMaterial attach="material" color="red" wireframe />
+      </mesh>
     </group>
   )
 }
