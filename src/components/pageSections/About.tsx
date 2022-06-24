@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 import { colors } from "../../styles/variables"
 import Section from "../Section"
+import { Grid } from "@mui/material"
 
 type LinkProps = {
   link: string

@@ -39,6 +39,12 @@ const WebPresence = () => {
           </a>
         </IconGrid>
       </Grid>
+      <a href="https://app.daily.dev/nategarrow">
+        <Card
+          src="https://api.daily.dev/devcards/caf1c7bced5d4c3eb487f36f37a3f815.png?r=hqy"
+          alt="Nathan G's Daily.Dev Card"
+        />
+      </a>
     </Section>
   )
 }
@@ -59,4 +65,8 @@ const IconGrid = styled(Grid)`
       fill: #006adf;
     }
   }
+`
+const Card = styled.img`
+  width: min(250px, 100%);
+  margin: 2rem auto;
 `
