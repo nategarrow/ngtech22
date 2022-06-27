@@ -7,9 +7,10 @@ gsap.registerPlugin(ScrollTrigger)
 type Props = {
   title?: string
   children: ReactNode
+  short: boolean
 }
 
-const Section = ({ title, children }: Props) => {
+const Section = ({ title, children, short = false }: Props) => {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -17,7 +18,7 @@ const Section = ({ title, children }: Props) => {
       duration: 0.3,
       scrollTrigger: {
         trigger: ref.current,
-        start: "top 75%",
+        start: short ? "top 90%" : "top 75%",
         once: true,
         toggleClass: "show",
       },

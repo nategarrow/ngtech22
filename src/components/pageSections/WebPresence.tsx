@@ -9,7 +9,7 @@ import { colors } from "../../styles/variables"
 import Section from "../Section"
 const WebPresence = () => {
   return (
-    <Section title="// Web Presence">
+    <Section title="// Web Presence" short={true}>
       <Grid container spacing={3} justifyContent="center">
         <IconGrid item>
           <a
