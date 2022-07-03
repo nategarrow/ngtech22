@@ -1,22 +1,17 @@
-import React, { Suspense, useRef, useEffect } from "react"
-import { useFrame, useThree } from "@react-three/fiber"
+import React, { Suspense, useRef } from "react"
 import { PointLight } from "three"
-import D20 from "./objects/icosahedron"
+import { useFrame, useThree } from "@react-three/fiber"
 import { Stars } from "@react-three/drei"
-import { useSpring, animated, SpringValue } from "react-spring"
-import { colors } from "../styles/variables"
 import { a } from '@react-spring/three'
+import { useSpring } from "react-spring"
+
+import D20 from "./objects/icosahedron"
+import { colors } from "../styles/variables"
 
 const Scene = ({ home = false }) => {
   const point = useRef<PointLight>(null!)
   const sphereGroup = useRef(null!)
   const { viewport } = useThree()
-
-  
-  useEffect(() => {
-    
-    console.log(`sphereGroup.current.center`, sphereGroup.current.center);
-  })
 
   useFrame(({ mouse, clock }) => {
     const et = clock.elapsedTime
@@ -31,8 +26,8 @@ const Scene = ({ home = false }) => {
   })
 
   const anim = useSpring({
-    position: home ? [0, 0, 0] : [0, 5, 0],
-    scale: home ? 1 : 1.25
+    position: home ? [0, 0, 0] : [0, 6, 0],
+    scale: home ? 1 : 1.5
   })
 
   return (

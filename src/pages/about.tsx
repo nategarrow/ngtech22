@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { colors } from "../styles/variables"
 import Section from "../components/Section"
 import { Grid } from "@mui/material"
+import SEO from "../components/seo"
 
 type LinkProps = {
   link: string
@@ -21,6 +22,10 @@ const ExtLink = ({ link, children }: LinkProps) => {
 const AboutPage = () => {
   return (
     <>
+      <SEO
+        title="About Me | Nathan Garrow | Front-End Web Developer"
+        desc="What makes this self-taught web developer tick?"
+      />
       <Section title="// About Me">
         <p>
           Hey! I'm Nathan. For the last few years, I've been a WordPress
