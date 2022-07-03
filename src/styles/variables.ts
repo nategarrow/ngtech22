@@ -5,3 +5,5 @@ export const colors = {
   white: "#d5d5d5",
   background: "#0E0A16",
 }
+
+export const transition: number = 400

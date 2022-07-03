@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
-import { colors } from "../../styles/variables"
-import Section from "../Section"
+import { colors } from "../styles/variables"
+import Section from "../components/Section"
 
-const Resume = () => {
+const WorkPage = () => {
   return (
     <Section title="// Work">
       <ProjectList>
@@ -60,7 +60,7 @@ const Resume = () => {
   )
 }
 
-export default Resume
+export default WorkPage
 
 const ProjectList = styled.ul`
   list-style: none;

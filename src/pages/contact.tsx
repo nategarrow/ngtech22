@@ -5,11 +5,12 @@ import { Grid } from "@mui/material"
 import TwitterIcon from "@mui/icons-material/Twitter"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import GitHubIcon from "@mui/icons-material/GitHub"
-import { colors } from "../../styles/variables"
-import Section from "../Section"
-const WebPresence = () => {
+import { colors } from "../styles/variables"
+import Section from "../components/Section"
+
+const ContactPage = () => {
   return (
-    <Section title="// Web Presence" short={true}>
+    <Section title="// Web Presence" short={true} center={true}>
       <Grid container spacing={3} justifyContent="center">
         <IconGrid item>
           <a
@@ -43,7 +44,7 @@ const WebPresence = () => {
   )
 }
 
-export default WebPresence
+export default ContactPage
 
 const IconGrid = styled(Grid)`
   svg {
