@@ -13,20 +13,11 @@ const ContactPage = () => {
   return (
     <>
       <SEO
-        title="Where I'm At | Nathan Garrow | Front-End Web Developer"
+        title="Reach Me | Nathan Garrow | Front-End Web Developer"
         desc="What makes this self-taught web developer tick?"
       />
       <Section title="// Web Presence" short={true} center={true}>
         <Grid container spacing={3} justifyContent="center">
-          <IconGrid item>
-            <a
-              href="https://twitter.com/nategarrow_"
-              target="_blank"
-              rel="noreferrer noopenner"
-            >
-              <TwitterIcon />
-            </a>
-          </IconGrid>
           <IconGrid item>
             <a
               href="https://www.linkedin.com/in/ntgarrow/"
@@ -34,6 +25,15 @@ const ContactPage = () => {
               rel="noreferrer noopenner"
             >
               <LinkedInIcon />
+            </a>
+          </IconGrid>
+          <IconGrid item>
+            <a
+              href="https://twitter.com/nategarrow_"
+              target="_blank"
+              rel="noreferrer noopenner"
+            >
+              <TwitterIcon />
             </a>
           </IconGrid>
           <IconGrid item>
@@ -64,6 +64,7 @@ const IconGrid = styled(Grid)`
   a:hover,
   a:focus-visible {
     svg {
+      transform: scale(1.2);
       fill: #006adf;
     }
   }

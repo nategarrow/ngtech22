@@ -97,7 +97,6 @@ li {
   font-family: "proxima-nova", sans-serif;
   font-size: 1.5rem;
   color: $white;
-  margin-bottom: 2rem;
   line-height: 1.5;
 
   &:last-of-type:not(.mb) {
@@ -109,6 +108,30 @@ li {
   }
 }
 
+p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+li {
+  margin-bottom: 0.1rem;
+  margin-left: 2rem;
+}
+ul {
+  list-style: none;
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+  &.bulletted {
+    li {
+      &:before {
+        content: "•";
+        color: $red;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+}
 /* Colors */
 .red {
   color: $red;

@@ -11,6 +11,39 @@ const WorkPage = () => {
         title="What I've Done | Nathan Garrow | Front-End Web Developer"
         desc="I've had the joy of working with some cool people on some cool projects."
       />
+      <Section title="// Projects">
+        <ProjectList>
+          <Project>
+            <Position>
+              NG Staem
+            </Position>
+            <Description>
+              <p>
+                NG Staem is a video game store landing page utilizing a Supabase API. Designs and game data for this project were supplied, but the implementation was up to the user to decide.I decided to approach this project using Next.js, Styled Components, and TypeScript.</p>
+              <p>Highlights</p>
+              <ul className="bulletted">
+                <li>TypeScript</li>
+                <li>Next.js v12</li>
+                <li>Supabase API</li>
+                <li>GSAP Animation</li>
+              </ul>
+
+              <p>Challenges</p>
+              <ul className="bulletted">
+                <li>TypeScript learning curve.</li>
+              </ul>
+
+              <p><a
+                href="https://portfolio-ng-staem.netlify.app/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                View on Netlify
+              </a></p>
+            </Description>
+          </Project>
+        </ProjectList>
+      </Section>
       <Section title="// Work">
         <ProjectList>
           <Project>
@@ -100,8 +133,4 @@ const Position = styled.h3`
     color: ${colors.blue};
   }
 `
-const Description = styled.div`
-  p {
-    margin-bottom: 1.2rem;
-  }
-`
+const Description = styled.div``
