@@ -1,9 +1,9 @@
 import React from 'react'
 import { ContextProviderComponent } from "../lib/context"
 import styled from "styled-components"
-import { colors } from '../styles/variables'
 import CanvasBG from '../canvas'
 import NavBar from "../components/NavBar"
+import "../styles/globalStyles.scss"
 
 type LayoutProps = {
   children: any
@@ -28,9 +28,6 @@ const PageTemplate = ({ children, pageContext }: LayoutProps) => {
 
 export default PageTemplate
 
-const HomeMain = styled.main`
-  height: 100vh;
-`
 const Main = styled.main`
   position: relative;
   transition: all .4s ease-in-out;

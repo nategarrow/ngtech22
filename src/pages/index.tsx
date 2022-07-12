@@ -1,10 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Header from "../components/Header"
 import SEO from "../components/seo"
-/* Styles */
-import "../styles/globalStyles.scss"
-import { colors } from "../styles/variables"
 
 // markup
 const IndexPage = () => {
