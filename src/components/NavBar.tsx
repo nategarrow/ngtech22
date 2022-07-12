@@ -47,6 +47,8 @@ const Header = styled.header`
 
   @media (max-width: 764px) {
     flex-direction: column;
+    background: rgb(7 1 24 / 70%);
+    backdrop-filter: blur(6px);
   }
 `
 
@@ -57,6 +59,7 @@ const Title = styled.p`
   letter-spacing: 6px;
   line-height: 1;
   text-shadow: 4px 0 0 black;
+  margin: 0;
 
   @media (max-width: 764px) {
     font-size: 1.5rem;
@@ -75,15 +78,11 @@ const Title = styled.p`
     }
   }
 `
-const Subtitle = styled.p`
-  color: white;
-  max-width: 40ch;
-  margin: 0 auto;
-`
 const Nav = styled.nav`
-@media (max-width: 764px) {
-  margin-top: 1rem;
-}
+  @media (max-width: 764px) {
+    margin-top: 1rem;
+  }
+
   ul {
     list-type: none;
     margin: 0;
@@ -91,12 +90,23 @@ const Nav = styled.nav`
     display: flex;
     align-items: center;
 
+    @media (max-width: 764px) {
+      justify-content: space-between;
+    }
+
     li {
       margin-bottom: 0;
+      margin-left: 0;
+      text-align: center;
+
       a {
         padding: .5rem 1rem;
         color: ${colors.blue};
         text-decoration: none;
+        
+        @media (max-width: 764px) {
+          padding: 1rem 1.5rem;
+        }
 
         &:hover,
         &:focus-visible {

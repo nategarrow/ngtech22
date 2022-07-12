@@ -18,7 +18,6 @@ const ExtLink = ({ link, children }: LinkProps) => {
   )
 }
 
-
 const AboutPage = () => {
   return (
     <>
@@ -28,31 +27,40 @@ const AboutPage = () => {
       />
       <Section title="// About Me">
         <p>
-          Hey! I'm Nathan. For the last few years, I've been a WordPress
-          developer, creating bespoke WordPress themes for RFTB, a digital design
-          agency based out of Weatherford, TX. However, the last few years I've had
-          my eyes on everything
-          React, with a particular interest in Gatsby and Next.js. I have lost
-          track of the number of conferences I've attended virtually, webinars
-          I've listened to during lunch, and hours spent on tutorials. <br />Now, I am
-          ready for the next step.
+          Hi! I'm Nathan, a self-taught, self-motivated front-end web developer
+          with {new Date().getFullYear() - 2018} years of professional
+          experience. For the last few years, I've been a WordPress developer,
+          creating bespoke WordPress themes for{" "}
+          <a href="https://rftb.agency/work" target="_blank" rel="noreferrer noopener">
+            RFTB
+          </a>
+          , a digital design agency based out of Weatherford, TX. However, the
+          last few years I've had my eyes on everything React, with a particular
+          interest in Gatsby and Next.js. I have lost track of the number of
+          conferences I've attended virtually, webinars I've listened to during
+          lunch, and hours spent on tutorials.
+        </p>
+        <p>
+          Now, I am ready for the next chapter in my development career. Can it
+          be with you?
         </p>
         <p>
           <u>
-            I am currently seeking employment with an agency that leverages modern
-            frameworks to create performant, responsive websites.
+            I am currently actively seeking employment with an agency that
+            leverages modern frameworks to create high performant Jamstack
+            websites.
           </u>
         </p>
         <p>
-          Lately, my interests have included TypeScript, Three.js, advanced
-          GraphQL, improving my skills with Gatsby and Next.js, as well as
-          headless CMS's such as Strapi, Contentful, and Keystone.js.
+          Lately, my professional interests have included TypeScript, Three.js,
+          advanced GraphQL, improving my skills with Gatsby and Next.js, as well
+          as headless CMS's such as Strapi, Contentful, and Keystone.js.
         </p>
         <p>
           When I'm not sitting in front of a computer or watching YouTube
           tutorials, I enjoy exploring new places with my wife, camping and
-          hiking, exploring museums, playing Dungeons &amp; Dragons with friends,
-          or{" "}
+          hiking, exploring museums, playing Dungeons &amp; Dragons with
+          friends, or{" "}
           <ExtLink link="https://www.instagram.com/p/B3K8MMdF2rE/">
             shooting&nbsp;the&nbsp;stars
           </ExtLink>{" "}

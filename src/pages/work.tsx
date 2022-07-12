@@ -11,39 +11,6 @@ const WorkPage = () => {
         title="What I've Done | Nathan Garrow | Front-End Web Developer"
         desc="I've had the joy of working with some cool people on some cool projects."
       />
-      <Section title="// Projects">
-        <ProjectList>
-          <Project>
-            <Position>
-              NG Staem
-            </Position>
-            <Description>
-              <p>
-                NG Staem is a video game store landing page utilizing a Supabase API. Designs and game data for this project were supplied, but the implementation was up to the user to decide.I decided to approach this project using Next.js, Styled Components, and TypeScript.</p>
-              <p>Highlights</p>
-              <ul className="bulletted">
-                <li>TypeScript</li>
-                <li>Next.js v12</li>
-                <li>Supabase API</li>
-                <li>GSAP Animation</li>
-              </ul>
-
-              <p>Challenges</p>
-              <ul className="bulletted">
-                <li>TypeScript learning curve.</li>
-              </ul>
-
-              <p><a
-                href="https://portfolio-ng-staem.netlify.app/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                View on Netlify
-              </a></p>
-            </Description>
-          </Project>
-        </ProjectList>
-      </Section>
       <Section title="// Work">
         <ProjectList>
           <Project>
@@ -63,8 +30,7 @@ const WorkPage = () => {
                   rel="noreferrer noopener"
                 >
                   everything
-                </a>
-                .
+                </a> while I was there.
               </p>
               <p>
                 However, I was never fully satisfied with just using WordPress.
@@ -96,6 +62,55 @@ const WorkPage = () => {
           </Project>
         </ProjectList>
       </Section>
+      <Section title="// Projects" short={true}>
+        <ProjectList>
+          <Project>
+            <Position>
+              NG Tech - Personal Portfolio
+            </Position>
+            <Description>
+              <p>
+                If you are reading this, you are already here! This is the 2022 iteration of my portfolio website, utilizing Gatsby v4, and Three.js/React-Three-Fiber, with design elements from the Material UI component library.
+              </p>
+            </Description>
+          </Project>
+          <Project>
+            <Position>
+              (Coming Soon)
+            </Position>
+            <Description>
+              <p>
+                New Next.js Project coming soon!
+              </p>
+              {/* <p><a
+                href="https://portfolio-ng-staem.netlify.app/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                View on Netlify
+              </a></p> */}
+            </Description>
+          </Project>
+          <Project>
+            <Position>
+              NG Staem
+            </Position>
+            <Description>
+              <p>
+                NG Staem is a video game store landing page utilizing a Supabase API. Designs and game data for this project were supplied, but the implementation was up to the user to decide. I decided to approach this project using Next.js, Styled Components, and TypeScript.
+              </p>
+              <p><a
+                href="https://portfolio-ng-staem.netlify.app/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                View on Netlify
+              </a></p>
+            </Description>
+          </Project>
+        </ProjectList>
+      </Section>
+
     </>
   )
 }
@@ -133,4 +148,10 @@ const Position = styled.h3`
     color: ${colors.blue};
   }
 `
-const Description = styled.div``
+const Description = styled.div`
+  p {
+    font-size: .9em;
+    font-weight: 100;
+    color: ${colors.grey};
+  }
+`
