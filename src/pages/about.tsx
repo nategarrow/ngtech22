@@ -37,8 +37,10 @@ const AboutPage = () => {
   const { data } = aboutData.prismicAboutPage
   const { preferences } = data
 
-  const prefLeft: PrefType[] = preferences.length > 2 ? preferences.splice(0, Math.ceil(preferences.length / 2)) : preferences
-  const prefRight: PrefType[] = preferences
+  const myPreferences = preferences.slice()
+
+  const prefLeft: PrefType[] = myPreferences.length > 2 ? myPreferences.splice(0, Math.ceil(myPreferences.length / 2)) : myPreferences
+  const prefRight: PrefType[] = myPreferences
 
   return (
     <>
