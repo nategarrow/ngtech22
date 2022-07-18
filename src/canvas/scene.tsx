@@ -43,7 +43,7 @@ const Scene = ({ home = false }) => {
             position={[4, 2, -4]}
           />
         </a.group>
-        <Stars count={7000} factor={10} radius={800} />
+        <Stars count={6000} factor={10} radius={800} />
       </Suspense>
     </>
   )

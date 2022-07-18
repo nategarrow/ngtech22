@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, ReactNode } from "react"
+import React, { useRef, useEffect, PropsWithChildren } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { transition } from '../styles/variables';
@@ -7,12 +7,12 @@ gsap.registerPlugin(ScrollTrigger)
 
 type Props = {
   title?: string
-  children: ReactNode
+  html?: string
   short?: boolean
   center?: boolean
 }
 
-const Section = ({ title, children, short = false, center = false }: Props) => {
+const Section: React.FC<PropsWithChildren<Props>> = ({ title, children, html = '', short = false, center = false }) => {
   const ref = useRef(null)
   const page = useRef(null)
 
@@ -34,9 +34,9 @@ const Section = ({ title, children, short = false, center = false }: Props) => {
           {title}
         </h2>
       )}
-      <div className="delayed fade">
-        {children}
-      </div>
+      {html && <div className="delayed fade" dangerouslySetInnerHTML={{ __html: html }} />}
+
+      {!html && children}
     </section>
   )
 }
