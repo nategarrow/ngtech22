@@ -16,4 +16,4 @@
 
 ## Where to Next?
 
-Lately I have been diving in to Svelte Kit! So you can expect to see a portfolio project or two appear soon! Keep up with me on [Twitter](https://twitter.com/nategarrow_) or [LinkedIn](https://www.linkedin.com/in/ntgarrow/)
+Lately I have been diving in to Svelte Kit! So you can expect to see a portfolio project or two appear soon, with a much larger project on the way! You can follow me on [Twitter](https://twitter.com/nategarrow_) or [LinkedIn](https://www.linkedin.com/in/ntgarrow/) to stay up to date with my projects.
