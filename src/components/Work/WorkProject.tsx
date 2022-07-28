@@ -47,7 +47,7 @@ const WorkProject = ({ title, company, duration, desc, link }: Props) => {
       {dur && <Year dangerouslySetInnerHTML={{ __html: dur }} />}
       <Position dangerouslySetInnerHTML={{ __html: pTitle }} />
       {desc && <Description dangerouslySetInnerHTML={{ __html: desc }} />}
-      {link && <a href={link} target="_blank" rel="noreferrer noopener">Viwe Project</a>}
+      {link && <a href={link} target="_blank" rel="noreferrer noopener">View Project</a>}
     </ProjectWrapper>
   )
 }
