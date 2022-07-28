@@ -1,54 +1,19 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+# Nate Garrow's Personal Portfolio Site
 
-## 🚀 Quick start
+[This project](https://nategarrow.tech) was built to replace the previous portfolio site built in 2020. This stack uses the following:
 
-1.  **Create a Gatsby site.**
+* Gatsby
+* Prismic
+* TypeScript
+* Three.js (React-Three-Fiber)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+## Challenges (a.k.a. Learning Opportunities)
 
-2.  **Start developing.**
+- TypeScript: This site was my first attempt using TypeScript. While there weren't many issues related to typing, I learned quite a bit. Biggest challenge taught me when to use `React.PropsWithChildren`. And personally, I prefer `interface` more!
 
-    Navigate into your new site’s directory and start it up.
+- Three.js: While `react-three-fiber` did a lot of the heavy lifting, this was an early attempt at adding a three-dimensional object to a website for me. And I must say I enjoyed it! I love the new dimension it brings to a website and playing in Blender, even if just making a simple icosagon (a shape chosen for my liking of D&D - I'm usually my party's dice goblin), made me want to dive in deeper, creating more advanced objects.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Where to Next?
 
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+Lately I have been diving in to Svelte Kit! So you can expect to see a portfolio project or two appear soon, with a much larger project on the way! You can follow me on [Twitter](https://twitter.com/nategarrow_) or [LinkedIn](https://www.linkedin.com/in/ntgarrow/) to stay up to date with my projects.
