@@ -27,8 +27,8 @@ type ListType = {
   title: string
   company?: string
   desc?: string
-  link?: string
   duration: DateType
+  link?: string
 }
 type ListDataType = {
   title: string
@@ -36,6 +36,9 @@ type ListDataType = {
   description?: {
     text?: string
     html?: string
+  }
+  project_link?: {
+    url: string
   }
   duration?: DateType | null
   body?: any
@@ -58,7 +61,8 @@ const JobList = ({ list, sort = false }: Props) => {
       title: data.title,
       company: data.company ? data.company : "",
       desc: data.description ? data.description.html : "",
-      duration: data?.body ? data.body[0] : null
+      duration: data?.body ? data.body[0] : null,
+      link: data?.project_link ? data.project_link.url : ''
     }
   })
   if (sort) ulList.sort(sortList)

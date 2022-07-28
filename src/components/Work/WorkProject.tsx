@@ -38,7 +38,7 @@ const getDate = (d: DateType) => {
   }
 }
 
-const WorkProject = ({ title, company, duration, desc }: Props) => {
+const WorkProject = ({ title, company, duration, desc, link }: Props) => {
   const pTitle = company ? `${title} <span>// ${company}</span>` : title
   const dur = duration ? getDate(duration) : false
 
@@ -47,6 +47,7 @@ const WorkProject = ({ title, company, duration, desc }: Props) => {
       {dur && <Year dangerouslySetInnerHTML={{ __html: dur }} />}
       <Position dangerouslySetInnerHTML={{ __html: pTitle }} />
       {desc && <Description dangerouslySetInnerHTML={{ __html: desc }} />}
+      {link && <a href={link} target="_blank" rel="noreferrer noopener">Viwe Project</a>}
     </ProjectWrapper>
   )
 }

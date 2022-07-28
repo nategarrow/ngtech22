@@ -45,6 +45,9 @@ const WorkPage = () => {
               description {
                 html
               }
+              project_link {
+                url
+              }
             }
           }
         }
